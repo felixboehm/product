@@ -41,6 +41,13 @@ Skalierungs-Schwergewicht (SAFe, LeSS).
 
     Fünf Posts vom Anti-SAFe-Argument zur AI-augmented Produktpraxis 2026.
 
+-   :material-robot-outline:{ .lg .middle } **[AI-native Produktentwicklung](ai-native/00-overview.md)**
+
+    ---
+
+    Der Schritt nach AI-augmented: agentische Workflows, Methoden-Eignung,
+    Claude-Code-Patterns und AI-Moderation — mit klaren Grenzen.
+
 </div>
 
 ## Für wen

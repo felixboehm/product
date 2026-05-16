@@ -68,8 +68,17 @@ nav:
           - AI-augmented Workflows: methods/modern/ai-augmented-workflows.md
   - Vergleich:
       - Matrix: comparison/matrix.md
+  - Visuals:
+      - Maturity-Modell: visuals/maturity-modell.md
+      - SAFe vs POM: visuals/safe-vs-pom-antipatterns.md
+      - AI Tooling Map: visuals/ai-tooling-map.md
   - Blog:
       - Übersicht: blog/index.md
+      - 1 · Warum SAFe nicht: blog/01-warum-safe-nicht.md
+      - 2 · Enterprise Outcome-Loop: blog/02-enterprise-outcome-loop.md
+      - 3 · Discovery-Track: blog/03-discovery-track.md
+      - 4 · Topologies + POM: blog/04-team-topologies-pom.md
+      - 5 · AI 2026: blog/05-ai-augmented-2026.md
   - Spec:
       - Projekt-Spec: specs/00-project-spec.md
 

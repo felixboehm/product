@@ -72,6 +72,11 @@ nav:
       - Maturity-Modell: visuals/maturity-modell.md
       - SAFe vs POM: visuals/safe-vs-pom-antipatterns.md
       - AI Tooling Map: visuals/ai-tooling-map.md
+  - AI-native:
+      - Überblick: ai-native/00-overview.md
+      - Methoden-Eignung: ai-native/methods-suitability.md
+      - Claude Code Patterns: ai-native/claude-code-patterns.md
+      - Orchestrierung: ai-native/orchestration.md
   - Blog:
       - Übersicht: blog/index.md
       - 1 · Warum SAFe nicht: blog/01-warum-safe-nicht.md

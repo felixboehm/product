@@ -60,3 +60,34 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Mermaid renders node labels as HTML inside <foreignObject>. Material's
+   .md-typeset color rules then override classDef's "color:#fff" via
+   inheritance, leaving white text invisible on dark fills in light mode.
+   Force HTML-label content to inherit color from the parent <g class="node">
+   element, where Mermaid sets the classDef color as inline style. */
+.md-typeset .mermaid g.node foreignObject,
+.md-typeset .mermaid g.node foreignObject *,
+.md-typeset .mermaid g.node .nodeLabel,
+.md-typeset .mermaid g.node .nodeLabel * {
+  color: inherit !important;
+}
+
+/* Edge labels have no classDef — force dark text so they read on the
+   light canvas, regardless of color-scheme. */
+.md-typeset .mermaid .edgeLabel,
+.md-typeset .mermaid .edgeLabel foreignObject,
+.md-typeset .mermaid .edgeLabel foreignObject *,
+.md-typeset .mermaid .edgeLabel .edgeLabel-text {
+  color: #1f2937 !important;
+  background-color: #fafafa !important;
+}
+
+/* Cluster / subgraph titles: dark text on the light canvas. */
+.md-typeset .mermaid .cluster .nodeLabel,
+.md-typeset .mermaid .cluster foreignObject,
+.md-typeset .mermaid .cluster foreignObject *,
+.md-typeset .mermaid .cluster-label foreignObject,
+.md-typeset .mermaid .cluster-label foreignObject * {
+  color: #1f2937 !important;
+}

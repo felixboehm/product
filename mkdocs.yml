@@ -1,0 +1,131 @@
+site_name: Agile Product Compendium
+site_description: Methoden, Vergleiche und ein Enterprise Outcome-Loop für moderne Produktorganisationen.
+site_url: https://felixboehm.github.io/product/
+site_author: Felix Böhm
+
+repo_url: https://github.com/felixboehm/product
+repo_name: felixboehm/product
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: de
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Light Mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Start: index.md
+  - Outcome-Loop:
+      - Enterprise Outcome-Loop: cycle/enterprise-outcome-loop.md
+  - Methoden:
+      - Übersicht: methods/00-overview.md
+      - Klassisch:
+          - Scrum: methods/classical/scrum.md
+          - Kanban: methods/classical/kanban.md
+          - XP: methods/classical/xp.md
+          - Crystal: methods/classical/crystal.md
+      - Discovery:
+          - Shape Up: methods/discovery/shape-up.md
+          - Dual-Track Agile: methods/discovery/dual-track-agile.md
+          - Continuous Discovery: methods/discovery/continuous-discovery.md
+          - Lean Startup: methods/discovery/lean-startup.md
+          - Jobs-to-be-Done: methods/discovery/jtbd.md
+      - Modern (2025/26):
+          - Team Topologies: methods/modern/team-topologies.md
+          - FAST Agile: methods/modern/fast-agile.md
+          - Outcome Roadmapping: methods/modern/outcome-roadmapping.md
+          - Product Operating Model: methods/modern/product-operating-model.md
+          - AI-augmented Workflows: methods/modern/ai-augmented-workflows.md
+  - Vergleich:
+      - Matrix: comparison/matrix.md
+  - Visuals:
+      - Maturity-Modell: visuals/maturity-modell.md
+      - SAFe vs POM: visuals/safe-vs-pom-antipatterns.md
+      - AI Tooling Map: visuals/ai-tooling-map.md
+  - Blog:
+      - Übersicht: blog/index.md
+      - 1 · Warum SAFe nicht: blog/01-warum-safe-nicht.md
+      - 2 · Enterprise Outcome-Loop: blog/02-enterprise-outcome-loop.md
+      - 3 · Discovery-Track: blog/03-discovery-track.md
+      - 4 · Topologies + POM: blog/04-team-topologies-pom.md
+      - 5 · AI 2026: blog/05-ai-augmented-2026.md
+  - Spec:
+      - Projekt-Spec: specs/00-project-spec.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+
+plugins:
+  - search:
+      lang:
+        - de
+        - en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/felixboehm
+    - icon: fontawesome/solid/globe
+      link: https://felixboehm.it
+  generator: false
+
+extra_css:
+  - assets/extra.css

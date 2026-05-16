@@ -1,0 +1,39 @@
+/* Subtle visual refinements on top of Material defaults */
+
+:root {
+  --md-primary-fg-color: #3a4fb8;
+  --md-primary-fg-color--light: #6679d3;
+  --md-primary-fg-color--dark: #2a3a8a;
+  --md-accent-fg-color: #5b6ec9;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #6679d3;
+  --md-primary-fg-color--light: #8a99dd;
+  --md-primary-fg-color--dark: #3a4fb8;
+}
+
+.md-typeset h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border-radius: 0.4rem;
+}
+
+.mermaid {
+  text-align: center;
+  margin: 1.5em 0;
+}

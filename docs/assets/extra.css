@@ -33,7 +33,30 @@
   border-radius: 0.4rem;
 }
 
-.mermaid {
+/* Mermaid: render on a light canvas in both color schemes.
+   Default Mermaid theme uses dark text on light fills; without a
+   guaranteed light wrapper, dark-mode page background swallows
+   subgraph labels, edge labels and any nodes without an explicit
+   classDef fill. A constant light canvas makes every diagram
+   readable regardless of the user's color-scheme choice. */
+.md-typeset .mermaid {
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  margin: 1.5em auto;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   text-align: center;
-  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .mermaid {
+  background-color: #f5f5f7;
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Make the SVG itself fill the canvas nicely on narrow screens */
+.md-typeset .mermaid svg {
+  max-width: 100%;
+  height: auto;
 }
